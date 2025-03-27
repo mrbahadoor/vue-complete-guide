@@ -18,8 +18,11 @@
     </header>
     <section id="user-goal">
       <h2>My Course Goal</h2>
+      <!-- Interpolation -->
       <p>{{ courseGoal }}</p>
-      <p>{{ outputGoal() }}</p>
+      <!-- v-html -->
+      <p v-html="outputGoal()"></p>
+      <!-- Data binding -->
       <p>Learn more <a v-bind:href="vueLink">about vue</a></p>
     </section>
   </body>
