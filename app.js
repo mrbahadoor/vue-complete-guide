@@ -5,6 +5,16 @@ const app = Vue.createApp({
       name: '',
     };
   },
+  computed: {
+    fullname() {
+      console.log('running again');
+      if (this.name === '') {
+        return '';
+      }
+
+      return this.name + ' ' + 'Doe';
+    }
+  },
   methods: {
     add(num) {
       this.counter += num;
@@ -14,7 +24,7 @@ const app = Vue.createApp({
     },
     resetInput() {
       this.name = '';
-    }
+    },    
   }
 });
 
