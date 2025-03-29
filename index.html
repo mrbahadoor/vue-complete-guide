@@ -14,16 +14,17 @@
   </head>
   <body>
     <header>
-      <h1>Vue Course Goals</h1>
+      <h1>Vue Events</h1>
     </header>
-    <section id="user-goal">
-      <h2>My Course Goal</h2>
-      <!-- Interpolation -->
-      <p>{{ courseGoal }}</p>
-      <!-- v-html -->
-      <p v-html="outputGoal()"></p>
-      <!-- Data binding -->
-      <p>Learn more <a v-bind:href="vueLink">about vue</a></p>
-    </section>
+    <section id="events">
+      <h2>Events in Action</h2>
+      <button v-on:click="add(5)">Add</button>
+      <button v-on:click.right="reduce(5)">Reduce</button>
+      <p>Result: {{ counter }}</p>
+      <!-- setName() without parameters has default event parameter -->
+      <input type="text" v-model="name"/>
+      <button v-on:click="resetInput">Reset input</button>
+      <p>Your name: {{ name }}</p>      
+    </section>   
   </body>
 </html>

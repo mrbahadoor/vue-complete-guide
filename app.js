@@ -1,21 +1,21 @@
 const app = Vue.createApp({
-    data() {
-        return {
-            courseGoal: 'Interpolation',
-            courseGoalA: 'Finish the course and learn vue!',
-            courseGoalB: '<u>Master vue and build amazing apps!</u>',
-            vueLink: 'https://vuejs.org'
-        }
+  data() {
+    return {
+      counter: 0,
+      name: '',
+    };
+  },
+  methods: {
+    add(num) {
+      this.counter += num;
     },
-    methods: {
-        outputGoal() {
-            const randomNumber = Math.random();
-            if (randomNumber < 0.5) {
-                return this.courseGoalA;
-            } else {
-                return this.courseGoalB;
-            }
-        }
+    reduce(num) {
+      this.counter -= num;
+    },
+    resetInput() {
+      this.name = '';
     }
+  }
 });
-app.mount('#user-goal');
+
+app.mount('#events');
