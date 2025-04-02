@@ -25,6 +25,9 @@
       <div v-else-if="goals.length === 1">
         <p>There is 1 goal in your list.</p>
       </div>
+      <div v-else>
+        <p>There are {{ goals.length }} goals in your list.</p>
+      </div>
       <ul>
         <li v-for="goal in goals">{{ goal }}</li>
       </ul>
